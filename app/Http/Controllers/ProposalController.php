@@ -11,6 +11,7 @@ use App\Http\Requests\ProposalUpdateRequest;
 use App\Models\Category;
 use App\Models\Proposal;
 use Illuminate\Http\Request;
+
 class ProposalController extends Controller
 {
 
@@ -22,9 +23,9 @@ class ProposalController extends Controller
             $proposals = $proposals($validated);
             return view('lawyer.proposalAll', compact('proposals'));
         }
-
+        $view = (empty($validated['rand'])) ? 'client.proposalMy' : 'client.proposalAll';
         $proposals = $clientListAction($validated);
-        return view('client.proposalAll', compact('proposals'));
+        return view($view, compact('proposals'));
 
     }
 
@@ -85,10 +86,12 @@ class ProposalController extends Controller
     {
         return view('loginForm');
     }
+
     public function randomProposals()
     {
         return view('loginForm');
     }
+
     public function clientProposals()
     {
         return view('loginForm');

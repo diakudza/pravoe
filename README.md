@@ -1,5 +1,6 @@
-execute this command in root directory 
+Выполните в директории
 ```
+
 ./vendor/bin/sail build
 ./vendor/bin/sail up -d
 ./vendor/bin/sail composer install
@@ -19,3 +20,5 @@ lawyer2@test.com
 ````
 
 После авторизации доступен раздел с заявками. У клиента свой, у юриста свой
+
+Временно задеплоил http://pravoe.diakov.xyz/

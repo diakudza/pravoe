@@ -24,6 +24,7 @@ class lawyerListAction
             })
             ->with('category')
             ->with('user')
+            ->orderBy('created_at', 'DESC')
             ->paginate($itemOnPage)
             ->withQueryString();
 
